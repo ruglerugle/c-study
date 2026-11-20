@@ -199,7 +199,7 @@ jobs:
             - 合図のコメント・レビューの URL：${{ github.event.comment.html_url || github.event.review.html_url }}
           claude_args: >-
             --max-turns 120
-            --allowedTools "Read,Edit,Write,Glob,Grep,TodoWrite,Bash(git:*),Bash(gh:*),Bash(npm:*),Bash(npx:*),Bash(node:*),Bash(cargo:*),Bash(rustc:*),Bash(php:*),Bash(composer:*),Bash(python3:*),Bash(pytest:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(sed:*),Bash(wc:*),Bash(diff:*),Bash(sha256sum:*),Bash(mkdir:*)"
+            --allowedTools "Read,Edit,Write,Glob,Grep,TodoWrite,Bash(git:*),Bash(gh:*),Bash(npm:*),Bash(npx:*),Bash(node:*),Bash(cargo:*),Bash(rustc:*),Bash(php:*),Bash(composer:*),Bash(python3:*),Bash(pytest:*),Bash(gcc:*),Bash(cc:*),Bash(clang:*),Bash(make:*),Bash(go:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(sed:*),Bash(wc:*),Bash(diff:*),Bash(sha256sum:*),Bash(mkdir:*)"
       # クラウドの Codex はボットのコメントには反応しないので、オーナー名義のトークンで頼む。
       # 頼む PR：Claude がファイルに書いた番号と、この実行で先頭のコミットが変わった対象の PR。
       - name: Codex にレビューを頼む
